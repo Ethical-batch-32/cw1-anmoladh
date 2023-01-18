@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/stylee.css">
+	<!--link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+
+</head>
+<body>
+	<div class="maindv"></div>
+<header>
+	<nav>
+		<div class="logo"><h1 class="animate__animated animate__heartBeat">Tour and travel</h1> </div>
+		<div class="menu">
+			<a href="#">home</a>
+			<a href="#">Gallery</a>
+			<a href="packages/Packages.html">Packages</a>&nbsp;&nbsp;&nbsp;
+			<a href="#">About Us</a>&nbsp;&nbsp;&nbsp;
+			<a href="#">Contact</a>
+            <a href="login.php">Sign in</a>
+	</nav>
+	
+	<main><section>
+		<div id="Slide_bg"></div>
+		<h1>Welcome to Nepal</h1>
+		<h1>Do come and visit  <span class="change_content"></span></h1>
+		<h4>Nepal once is not enough.</h4><br>
+		<h4>adventure is worthwhile</h4><br>
+        <h4>dicover new places with us, adventure awaits</h4></section></main>
+		
+</header>	
+    <div class="login-form-container">
+    <!--form action="">
+        <h1 class="animate__animated animate__heartBeat">login</h1>
+        <input type="email" class="box" placeholder="enter your email">
+        <br><input type="password" class="box" placeholder="enter your password">
+        <br><input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="#">register now</a></p>
+    </form-->
+
+</div>
+<section class="review" id="review">
+	<h1 class="heading">Review</h1>
+	
+				<img src="images/mukesh.jpg" alt="Reviewer" style="height:150px;">
+				<h3>Mukesh Kumar Mahato</h3>
+				<p>amazing places, loved the culture.</p>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+
+			
+</section>
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>PlanNepal is dedicated to making travel simple. We specialize in a complete range of travel-related services and adventure activities, from five-star to budget class. In providing this full range of travel- and adventure-related activities, AceTravels.com continues to promote responsible tourism, sustainable development of the country and preservation of local cultures and traditions. As always, we continue to place a significant priority on the continual improvement of our services in order to maintain the highest level of customer satisfaction.   
+
+<br>Vision: To be 1st Choice of Company for Customers, Job Seekers & Shareholders
+
+
+<br><br>Mission: To be Nepal's #1 Travel Brand
+
+<br><br>Motto: Your Travel Partner
+
+<br><br>Core Values
+
+<br><br>Fair Price
+<br><br>Integrity
+<br><br>Quality Service
+<br><br>Customer Satisfaction
+<br><br>Responsible Travel</p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">Kathmandu</a>
+            <a href="#">Pokhara</a>
+            <a href="#">Mustang</a>
+            <a href="#">Lumbini</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            
+            <a href="#">packages</a>
+            
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span> ACME Students</span> | all rights reserved! </h1>
+
+</body>
+</html>
