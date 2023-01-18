@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     Saddle (75mm x 3/4) :
+     <input value = 0 type="text" onBlur="findTotal()" name="num">
+    <input   onBlur()="findTotal()" type="text" name="qty" value="55"/>
+      Ferrule (19mm) : <br>
+      Total:<input type="text" id='total' value=""readonly></input>
+    <button type="submit" name="process" class="btn btn-primary" id="submit" onclick="findTotal()">Submit Estimate</button>
+     <script>
+        function findTotal(){
+            var arr = document.getElementsByName('qty');
+            var scale = document.getElementsByName('num');
+            var tot = 0;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i].value != "" && scale[i].value != ""){
+                    tot += parseInt(scale[i].value) * parseInt(arr[i].value);
+                
+                }
+            }
+                document.getElementById('total').value = tot;
+            }
+</script>
+    </body>
+</html>
+<?php 
+	include "db.php";
+	#Login script is begin here
+	#If user given credential matches successfully with the data available in database then we will echo string login_success
+	#login_success string will go back to called Anonymous funtion $("#login").click() 
+
+	if(isset($_POST["signin"])){
+		$email = mysqli_real_escape_string($con,$_POST["email"]);
+		$pass =	md5($_POST["password"]);
+		$sql = "SELECT * FROM user_details WHERE `c_email` = '$email' AND `pswd` = '$pass'";
+		$run_query = mysqli_query($con,$sql);
+		$count = mysqli_num_rows($run_query);
+		//we have created a cookie in login_form.php page so if that cookie is available means user is not login
+        
+	  	//if user record is available in database then $count will be equal to 1
+		if($count == 1){
+			while($row = mysqli_fetch_assoc($run_query)){
+					$_SESSION["id"] = $row["c_id"];
+					$_SESSION["name"] = $row["username"];
+					$_SESSION["email"] = $row["c_email"];
+					$ip_add = getenv("REMOTE_ADDR");
+						
+					echo "<script> location.href='index.php'; </script>";
+					exit();
+			}
+		}
+		else{
+            $email = mysqli_real_escape_string($con,$_POST["email"]);
+			$pass =	md5($_POST["password"]);
+			$sql = "SELECT * FROM admin_details WHERE `email` = '$email' AND `password` = '$pass'";
+            $run_query = mysqli_query($con,$sql);
+            $count = mysqli_num_rows($run_query);
+
+            //if user record is available in database then $count will be equal to 1
+            if($count == 1){
+				while($row = mysqli_fetch_assoc($run_query)){
+						$_SESSION["id"] = $row["id"];
+						$_SESSION["name"] = $row["name"];
+						$_SESSION["email"] = $row["email"];
+						$ip_add = getenv("REMOTE_ADDR");
+							
+						echo "<script> location.href='admin/index.php'; </script>";
+						exit();
+				}
+			}
+			else{
+                echo "<script>alert('PLease register before login..!')</script>";
+				echo "<script> location.href='index.php'; </script>";
+                exit();
+            }
+		}
+	}
+?>
+

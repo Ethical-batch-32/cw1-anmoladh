@@ -1,0 +1,287 @@
+/* stylesheet for login page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/bgg.jpg);
+	object-fit: cover;
+}
+.container{
+	position: absolute;
+	background: rgb(255, 255, 255,0.1);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 5px;
+	box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+.close{
+	margin: 0 0 10px 0;
+	width: 100%;
+	height: 60px;
+	border-bottom: 2px solid #dddddd;
+}
+.close i{
+	float: right;
+	font-size: 32px;
+	padding: 13px;
+	color: #1d4052;
+	cursor: pointer;
+}
+.close i:hover{
+	color: rgb(252, 87, 87);
+}
+.center{
+	margin: 0 30px 0 30px;
+	width: 400px;
+	background: rgb(255, 255, 255,0.1);
+	border-radius: 10px;
+}
+.center h1{
+	text-align: center;
+	padding: 10px 0 20px 0;
+	color: #1d4052;
+}
+.center form{
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+form .txt_field{
+	position: relative;
+	border-bottom: 2px solid #adadad;
+	margin: 30px 0;
+}
+.txt_field input{
+	width: 100%;
+	padding: 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+	color: #fff;
+}
+.txt_field label{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: #ddd;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events:none;
+	transition: .5s;
+}
+.txt_field span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: #fff;
+	transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+	top: -5px;
+	color: #fff;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+	width: 100%;
+}
+input[type="submit"]{
+	width: 100%;
+	height: 50px;
+	border: none;
+	background: #1d4052;
+	border-radius: 25px;
+	font-size: 18px;
+	color: #e9f4fb;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+input[type="submit"]:hover{
+	border-color: #2691d9;
+	transition:.5s;
+}
+.pass{
+	margin-top: 30px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+}
+.pass:hover{
+	text-decoration: underline;
+	color: red;
+}
+.signup_link{
+	margin: 30px 0;
+	padding-bottom: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+}
+.signup_link a{
+	text-decoration: none;
+	color: #fff;
+}
+.signup_link a:hover{
+	text-decoration: underline;
+	color: #1d4052;
+}
+.alert-danger {
+	color: #a94442;
+	background-color: rgb(242, 222, 222,0.5);
+	border-color: #ebccd1;
+}
+.alert-danger{
+	color: #843534;
+}
+.alert {
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert h4 {
+    margin-top: 0;
+    color: inherit;
+}
+/* userprofile stylesheet starts */
+.userprofile{
+	background:rgb(0,0,0,0.5);
+	width:55%;
+	margin:4rem auto;
+	border-radius: .5rem;
+	box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+.userprofile .box-container{
+	padding:1rem 0;
+}
+.userprofile .box-container .box{
+	margin:0 2rem 1rem ;
+	border-radius: 5px;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	background:rgb(0,0,0,0.3);
+}
+.userprofile .box-container .box .image{
+	width:100%;
+}
+.userprofile .box-container .box .image img{
+	height: 150px;
+	width: 150px;
+	object-fit: cover;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+}
+.userprofile .box-container .box .content{
+	height: 100%;
+	width:100%;
+	padding:2rem;
+	background:rgb(0,0,0,0.3);
+}
+.userprofile .box-container .box:nth-child(even){
+	flex-flow: row-reverse;
+}
+.userprofile .box-container .box:nth-child(even) .content{
+	text-align: left;
+}
+.userprofile .box-container .box .content h3{
+	font-size: 1.5rem;
+	padding-bottom: 5px;
+	text-decoration: underline;
+	color: #fff;
+}
+.userprofile .box-container .box .content span{
+	text-align: left;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.userprofile .box-container .box .content span ul li{
+	font-size: 14px;
+	font-weight:600;
+	color: #fff;
+	padding: 10px;
+	list-style: none;
+}
+/* userprofile stylesheet ends */
+/* pbooking stylesheet ends */
+.booking{
+	background:rgb(0,0,0,0.5);
+	width:90%;
+	margin:2rem auto;
+	border-radius: .5rem;
+	box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+.booking .box-container{
+	padding:1rem 0;
+}
+.booking .box-container .box{
+	margin:0 2rem 1rem ;
+	border-radius: 5px;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	background:rgb(0,0,0,0.1);
+}
+.booking .box-container .box .image{
+	width:100%;
+}
+.booking .box-container .box .image img{
+	height: 150px;
+	width: 150px;
+	object-fit: cover;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+}
+.booking .box-container .box .content{
+	height: 100%;
+	width:100%;
+	color: #fff;
+}
+.content-table{
+	margin: 0;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1rem;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+}
+.content-table thead tr{
+	background-color: #1d4052;
+	color: #fff;
+	text-align: left;
+	font-weight: bold;
+}
+.content-table th,
+.content-table td{
+	padding: 15px 25px;
+}
+.content-table tbody tr{
+	border-bottom: 1px solid #aaa;
+}
+.content-table tbody tr:nth-of-type(even){
+	background-color: rgb(85, 85, 85,0.5);
+}
+.content-table tbody tr:last-of-type{
+	border-bottom: 2px solid #1d4052;
+}
+
+/* pbooking stylesheet ends */
